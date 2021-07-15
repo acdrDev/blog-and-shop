@@ -3,7 +3,6 @@
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +16,8 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('page');
-})->middleware('auth');
-
-/* Login  */
-Route::get('/login', function(){
-  return view('login');
-})->name('login');
-
-Route::post('/login', [LoginController::class, "login"]);
+    return view('index');
+});
 
 
 /* Route::post('/register', function(Request $request) { */

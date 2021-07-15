@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('preview');
             $table->string('file');
             $table->integer('price');
-            $table->integer('published_by');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('category_id')->constrained('categories');
             $table->timestamps();
         });
     }

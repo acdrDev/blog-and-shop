@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Animated Login Form</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 			<img src="img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="/login" method="POST">
+			<form action="/admin" method="POST">
       @csrf  
  			<img src="img/avatar.svg">
 				<h2 class="title">Welcome</h2>
@@ -43,3 +43,4 @@
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+

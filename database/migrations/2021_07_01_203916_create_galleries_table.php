@@ -19,7 +19,8 @@ class CreateGalleriesTable extends Migration
             $table->text('description');
             $table->string('img');
             $table->integer('price');
-            $table->integer('published_by');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('category_id')->constrained('categories');
             $table->timestamps();
         });
     }
