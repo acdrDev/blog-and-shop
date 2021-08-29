@@ -19,4 +19,12 @@ class LoginController extends Controller
 
       return redirect('admin');
     }
+
+    public function logout(Request $req){
+      Auth::logout();
+
+      $req->session()->invalidate();
+      
+      return redirect('/');
+    }
 }

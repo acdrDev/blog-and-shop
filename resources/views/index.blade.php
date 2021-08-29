@@ -53,7 +53,16 @@
                     <img src="img/WhatsApp Image 2021-06-27 at 9.37.22 PM.jpeg">
                 </div>
                 <div class="Section_p">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quas, saepe, voluptates, consequatur quos eveniet eius maiores veniam aut alias necessitatibus excepturi quae. Amet iste quaerat excepturi voluptates beatae culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque aliquid est ipsum minima placeat, itaque magni consequatur magnam ipsam hic cupiditate enim molestias quibusdam distinctio beatae? Blanditiis, est provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, deserunt mollitia architecto accusantium ut ipsa inventore consequatur repellendus quo, praesentium quod cupiditate vitae dignissimos dolorum, odit at! Facere, minus a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed libero consequuntur quibusdam ea animi quia veniam esse, ipsam odio tempore earum consectetur voluptates rerum laudantium, saepe, vel ipsa itaque.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quas, saepe, voluptates,
+                        consequatur quos eveniet eius maiores veniam aut alias necessitatibus excepturi quae. Amet iste
+                        quaerat excepturi voluptates beatae culpa. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Iusto neque aliquid est ipsum minima placeat, itaque magni consequatur magnam ipsam hic
+                        cupiditate enim molestias quibusdam distinctio beatae? Blanditiis, est provident! Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Quisquam, deserunt mollitia architecto accusantium
+                        ut ipsa inventore consequatur repellendus quo, praesentium quod cupiditate vitae dignissimos
+                        dolorum, odit at! Facere, minus a. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda sed libero consequuntur quibusdam ea animi quia veniam esse, ipsam odio tempore earum
+                        consectetur voluptates rerum laudantium, saepe, vel ipsa itaque.</p>
                 </div>
             </section>
         </div>
@@ -67,7 +76,9 @@
         <div class="Section">
             <section>
                 <div class="Section_p">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit et est magnam qui sequi saepe molestias, sit adipisci reiciendis magni tempora, repellendus libero placeat, iure alias quos laudantium aliquid illo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit et est magnam qui sequi saepe
+                        molestias, sit adipisci reiciendis magni tempora, repellendus libero placeat, iure alias quos
+                        laudantium aliquid illo?</p>
                 </div>
                 <div class="Section_Redes">
                     <img src="img/img_Section_1.png">

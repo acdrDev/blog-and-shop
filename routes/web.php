@@ -19,19 +19,19 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-/* Route::post('/register', function(Request $request) { */
-/*   $user = new User(); */
-/*   $user->name = $request->name; */
-/*   $user->lastname = $request->lastname; */
-/*   $user->email = $request->email; */
-/*   $user->password = bcrypt($request->password); */
-/*   $user->rol = $request->rol; */
-/*   $user->save(); */
-/*   return json_encode(["msg" => "usuario agregado"]); */
-/* }); */
+/* 
+Route::post('/register', function(Request $request) {
+  $user = new User();
+  $user->name = $request->name;
+  $user->lastname = $request->lastname;
+  $user->email = $request->email;
+  $user->password = bcrypt($request->password);
+  $user->rol = $request->rol;
+  $user->save();
+  return json_encode(["msg" => "usuario agregado"]);
+}); */
 
 // Token
-Route::get('/api/v1/token', function () {
+Route::get('/token', function () {
           return csrf_token(); 
 });

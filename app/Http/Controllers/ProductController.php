@@ -7,12 +7,17 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-  public function get() {
+  public function index() {
     $getProducts = Product::all();
     return $getProducts;
   }
 
-  public function add(Request $req) {
+  public function show($id) {
+    $product = Product::find($id);
+    return $product;
+  }
+
+  public function store(Request $req) {
     $products = new Product();
     $products->title = $req->title;
     $products->description = $req->description;
@@ -31,7 +36,7 @@ class ProductController extends Controller
     return $product;
   }
 
-  public function delete($id){
+  public function destroy($id){
     $product = Product::find($id);
     $product->delete();
     

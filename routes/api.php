@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* Products */
-Route::get('/products', [ProductController::class, "get"]);
-Route::post('/products', [ProductController::class, "add"]);
-Route::put('/products/{id}', [ProductController::class, "update"]);
-Route::delete('/products/{id}', [ProductController::class, "delete"]);
-
+Route::apiResource('products', ProductController::class);
 /* Gallery */
+Route::apiResource('gallery', GalleryController::class)->except(['index']);
+/* Posts */
+Route::apiResource('posts', PostController::class)->except(['index']);
