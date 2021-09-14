@@ -14,20 +14,20 @@ body{
     font-size: 16px;
 }
 /*----------------------------------------------------------Titulo------------------------------------*/
-.Contenedor{
+.content{
     width: 100%;
-    max-width: 1150px;
+    max-width: 1050px;
     margin: auto;
     margin-top: 2.2rem;
 }
-.Title{
+.title{
     font-family: 'Paprika', cursive;
 }
-.Title_h1{
-    font-size: 1.8rem;
+.title h1{
+    font-size: 3rem;
 }
-.Title_p{
-    font-size: 1rem;
+.title p{
+    font-size: 1.2rem;
 }
 /*-------------------------------------------Elavoracion Del Menu--------------------------------------*/
 .menu{
@@ -50,72 +50,66 @@ body{
     text-decoration: none;
     color: var(--ColorFondo);
 }
-.menu_li_Active a{
+.menu_li--active a{
     font-size: 1.11em;
     color:  var(--Blanco);
 }
-/* Hice esto sin ninguna razon pero si quiere lo puede usar, (Es una Transicion al menu :v)
+/*Hice esto sin ninguna razon pero si quiere lo puede usar, (Es una Transicion al menu :v)
 .menu li :hover{
     color: #fff;
-    transition: all 1s;
+    font-weight: 500;
+    transition: 1.5s;
 }
 */
-.Img_Header img{
+
+.img_header img{
     width: 100%;
     height: 26em;
     margin: .9em 0 0;
 }
 /* ----------------------------------------Los Diseños del Section---------------------------------*/
-.Section{
+.section{
     width: 100%;
     background: var(--Blanco);
     margin-bottom: 3px;
 }
-.Subtitulo h2{
+.subtitle {
     font-size: 1.7em;
     font-weight: 10;
     padding: .69rem 1.29rem;
     margin-top: .68rem;
 }
-.Section_Img img{
+.section img{
     display: block;
     width: 60%;
-    height: 30em;
     margin: auto;
 }
-.Section_p p{
+.text{
     padding: 1.29rem 3.09em 1.8rem;
     text-align: justify;
 }
 /*-----------------------------------Imagenes de Las Redes Sociales-----------------------------*/
-.Section_Redes{
-  text-align: center;
+.section_redes{
+  display: flex;
+  justify-content: center;
 }
-.Section_Redes img{
+.section_redes img{
     width: 7em;
     height: 7em;
     margin: 1em 1em 2em;
 }
 /*-------------------------------------Estructuracion De la Pagina------------------------------*/
-.Justify_Section{
+.justify_section{
     display:grid; 
     grid-template-columns: 70% 29%;
 }
-.Section_Shot_Justify{
-    margin: 0 0 8px 0;
-}
-.Section_Shot{
-    background: var(--Blanco);
-    margin-bottom:.25em;
-  
-}
 /*-------------------------La organizacion de los productos con el grid---------------------------*/
-.Section_Shot_Contenedor{
+.shot_content{
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
  /*-----------------------------Estos son Los Productos de la Shot----------------------------*/
-.Products{
+.products{
     text-align: center;
     width: 90%;
     height: 17rem;
@@ -123,15 +117,15 @@ body{
     margin: 1.9em;
     font-weight: bold;
 } 
-.Products img{
+.products img{
     width: 85%;
     height: 12em;
 }
-.Products h3{
+.products h3{
     color: rgb(9, 255, 0);
-    padding: 3px 0 ;
+    padding: .6rem 0 .3rem;
 }
-.Products button, .Section_Publications_Button Button {
+.products button, .section_publications button {
     width: 6rem;
     height: 1.7rem;
     border-radius: .38rem;
@@ -141,77 +135,89 @@ body{
 }
 
 /*-----------------------Section De Las Publicaciones------------------------*/
-.Section_Publications{
+.section_publications{
     text-align: justify;
     width: 95%;
     display: block;
     margin: auto;
 }
-.Section_Publications img{
+.section_publications img{
     padding: 1em 0;
     width: 100%;
     height: 20em;
 }
-.Section_Publications_Button button{
+.section_publications button{
     margin: 1rem 0;
+    cursor: pointer;
 }
+/*
+.section_publications h3{
+    font-weight: 10000;
+    margin:1rem 0;
+}*/
+
 /*---------------------------------Este es el Aside------------------------------------------*/
-.Section_Aside{
+.aside{
     margin: .69rem 0 .69rem .69rem ;
-    width:100%;
-    background: var(--Blanco);
     padding: 1rem;
 }
-.Section_Aside p{
+.aside p{
     padding: 0 0 .69rem;
 }
-.Section_Aside_ul{
+.aside ul{
     padding: .8rem 0 0;
 }
-.Section_Aside_ul li{
+.aside ul li{
     list-style: none;
     display: block;
 }
-.Section_Aside_ul a{
+.aside a{
     text-decoration: none; 
     color: var(--ColorMenu);  
 }
-.Section_Aside_Form{
+.aside--input{
     display: block;
 }
-.Section_Aside_Form input{
- margin-right: .38rem;
+.aside--input a{
+ margin: 1rem .38rem;
+ color: #474B4E;
 }
-/*-------------------------------------------Diseño del Footer-----------------------------------------*/
-.Footer{
+.aside--input span a{
+    display: inline-block;
+    color: #00a4db;
+    margin-top: .5rem;
+    font-size: 1.3rem;
+}
+
+/*-------------------------------------------DiseÃƒÂ±o del Footer-----------------------------------------*/
+.footer{
     width: 100%;
     height: 2.9rem;
     text-align: center;
     background: var(--ColorMenu);
     color: var(--Blanco);
+    margin: .69rem 0 ;
     font-size: 1.1rem;
     padding-top: .75rem;
 }
+
 /*-----------------------------------------Responsive------------------------------------------*/
 @media  (max-width:720px) {
-    .Section_Shot_Contenedor{
+    .shot_content{
         grid-template-columns: 50% 50%;
     }
-    .Products{
+    .products{
         margin: 1.2em;
-    }
-    .Section_Img img{
-        height: 19em;
     }
 } 
 @media (max-width:515px){
     body{
         font-size:12.5px;
     }
-    .Section_Shot_Contenedor{
+    .shot_content{
         grid-template-columns: 100%;
     }
-    .Justify_Section{
+    .justify_section{
         grid-template-columns: 69% 28%;
     }   
 }
