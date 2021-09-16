@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Products */
-Route::apiResource('products', ProductController::class);
 /* Gallery */
 Route::apiResource('gallery', GalleryController::class)->except(['index']);
 /* Posts */
 Route::apiResource('posts', PostController::class)->except(['index']);
+/* Products */
+Route::apiResource('products', ProductController::class)->except(['index']);

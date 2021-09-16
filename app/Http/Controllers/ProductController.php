@@ -2,44 +2,155 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-  public function index() {
-    $getProducts = Product::all();
-    return $getProducts;
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
+  {
+    return view('admin.product.index')->with('data', Product::all());
   }
 
-  public function show($id) {
-    $product = Product::find($id);
-    return $product;
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function create()
+  {
+    return view('admin.product.create')->with('categories', Category::all());
   }
 
-  public function store(Request $req) {
-    $products = new Product();
-    $products->title = $req->title;
-    $products->description = $req->description;
-    $products->price = $req->price;
-    $products->published_by = $req->published_by;
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function store(Request $request)
+  {
+    $request->validate([
+      'title' => 'required',
+      'category_id' => 'required',
+      'preview' => 'mimes:jpeg,jpg,png,gif|required',
+      'file' => 'required',
+      'price' => 'required',
+      'user_id' => 'required'
+    ]);
 
-    $products->save();
+    $input = $request->all();
+
+    // Save preview
+    $previewName = date('d-m-Y') . $request->file('preview')->getClientOriginalName();
+    $preview = $request->file('preview')->storeAs('public/products', $previewName);
+
+    // Save file
+    $fileName = $request->file('preview')->getClientOriginalName();
+    $file = $request->file('file')->storeAs('public/products', $fileName);
+
+    $input['preview'] = $preview;
+    $input['file'] = $file;
+
+    Product::create($input);
+
+    return redirect('/admin/products') . with(200);
+  }
+
+  /**
+   * Display the specified resource.
+   *
+   * @param  \App\Models\Gallery  $gallery
+   * @return \Illuminate\Http\Response
+   */
+  public function show(Product $product)
+  {
+    //
+  }
+
+  /**
+   * Show the form for editing the specified resource.
+   *
+   * @param  \App\Models\Gallery  $gallery
+   * @return \Illuminate\Http\Response
+   */
+  public function edit(Product $product)
+  {
+    return view('admin.products.edit', ['data' => $product, 'categories' => Category::all()]);
+  }
+
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @param  \App\Models\Gallery  $gallery
+   * @return \Illuminate\Http\Response
+   */
+  public function update(Request $request, Product $product)
+  {
+    $request->validate([
+      'title' => 'required',
+      'category_id' => 'required',
+      'user_id' => 'required'
+    ]);
+
+    $input = $request->all();
+
+    if (!empty($request->file('file'))) {
+      // Delete existing file
+      if (Storage::exists($product->file)) {
+        Storage::delete($product->file);
+      }
+
+      // Save new file
+      $fileName = $request->file('file')->getClientOriginalName();
+      $file = $request->file('file')->storeAs('public/products', $fileName);
+
+      $input['file'] = $file;
+    }
+
+    if (!empty($request->file('preview'))) {
+      // Delete existing preview file
+      if (Storage::exists($product->preview)) {
+        Storage::delete($product->preview);
+      }
+
+      // Save new preview
+      $previewName = date('d-m-Y') . $request->file('preview')->getClientOriginalName();
+      $preview = $request->file('preview')->storeAs('public/products', $previewName);
+
+      $input['preview'] = $preview;
+    }
+
+    $product->update($input);
+    return redirect('/admin/products') . with(200);
+  }
+
+  /**
+   * Remove the specified resource from storage.
+   *
+   * @param  \App\Models\Gallery  $gallery
+   * @return \Illuminate\Http\Response
+   */
+  public function destroy(Product $product)
+  {
+    // This validation is not necessary but I put it in case something
+    if (Storage::exists($product->file)) {
+      Storage::delete($product->file);
+    }
     
-    return $products;
-  }
+    if (Storage::exists($product->preview)) {
+      Storage::delete($product->preview);
+    }
 
-  public function update(Request $req, $id){
-    $product = Product::find($id);
-    $product->update($req->all());
-
-    return $product;
-  }
-
-  public function destroy($id){
-    $product = Product::find($id);
     $product->delete();
-    
-    return $product;
+    return redirect('/admin/products')->with('success', 'Task Deleted Successfully');
   }
 }

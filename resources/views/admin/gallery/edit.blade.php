@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 
 @section('title', 'Galleria')
-<meta name="csrf-token" content="{{ csrf_token() }}" />
 @section('content_header')
     <div class="d-flex aling-items-center">
         <h1>Actualizar publicación</h1>
@@ -10,6 +9,7 @@
 
 @section('content')
     <form id="form" action="{{ route('gallery.update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
+        @csrf
         @method('put')
         <button type="submit" id="submit" class="btn btn-primary mb-3">Actualizar publicación</button>
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ProductController;
 
 /* Login */
 Route::get('/', function(){
@@ -22,3 +23,5 @@ Route::get('/dashboard', function(){
 Route::resource('/posts', PostController::class)->only(['index', 'create', 'edit'])->middleware('auth');
 
 Route::resource('/gallery', GalleryController::class)->only(['index', 'create', 'edit'])->middleware('auth');
+
+Route::resource('/products', ProductController::class)->only(['index', 'create', 'edit'])->middleware('auth');

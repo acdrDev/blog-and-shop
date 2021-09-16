@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
-  protected $fillable = ['title', 'description', 'price', 'published_by'];
-
   /* Relations */
   public function category()
   {
@@ -19,4 +18,11 @@ class Product extends Model
   {
     return $this->belongsTo('App\Models\User');
   }
+  
+  public function getUrlPathAttribute(){
+    return Storage::url($this->preview);    
+  }
+
+  protected $guarded = [];
 }
+
