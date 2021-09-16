@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
+  use HasFactory;
   /* Relations */
   public function category()
   {

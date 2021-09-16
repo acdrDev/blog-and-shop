@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ViewController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+/*Route::get('/', [ViewController::class, 'index']);
+Route::get('/', [ViewController::class, 'shop']);
+Route::get('/', [ViewController::class, 'post']);*/
+
+Route::get('/', [ViewController::class, 'index'])->name('index');
+Route::get('shop', [ViewController::class, 'shop'])->name('shop');
+Route::get('post', [ViewController::class, 'post'])->name('post');
+Route::get('content', [ViewController::class, 'content'])->name('content');
+Route::get('gallery', [ViewController::class, 'gallery']) ->name('gallery');
+
+    
 
 /* 
 Route::post('/register', function(Request $request) {
