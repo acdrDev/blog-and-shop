@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title','Tienda')
+@section('title','Galeria')
     
 @section('content')
 
@@ -12,10 +12,9 @@
         @foreach ($products as $product)
 
             <div class="products">
-                <img src="{{$product->img}}" alt="{{$product->title}}">
+                <img src="{{asset($product->img)}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
                 <h3>{{$product->price}}</h3>
-                <button id="{{$product->id}}">Comprar</button>
             </div> 
             @endforeach
              

@@ -83,6 +83,7 @@ body{
     display: block;
     width: 60%;
     margin: auto;
+    padding-top: 1rem;
 }
 .text{
     padding: 1.29rem 3.09em 1.8rem;
