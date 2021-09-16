@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Post extends Model
 {
@@ -18,6 +19,10 @@ class Post extends Model
         return $this->belongsTo('App\Models\User');
     }
   
+    public function getUrlPathAttribute(){
+        return Storage::url($this->banner);    
+    }
+
     protected $table = "posts";
     protected $guarded = [];
 }

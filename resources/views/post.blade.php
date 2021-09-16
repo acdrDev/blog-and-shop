@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title','Post')
+@section('title', 'Publicaciones')
     
       <!-----------------------------------Creacion de Las Secciones------------------------------------>
       @section('content')
@@ -12,8 +12,8 @@
     <h2 class="section subtitle"> {{$post->title}}</h2>
     <section class="section">
         <div class="section_publications">
-           <img src=" {{asset($post->banner)}}" alt="{{$post->title}}">
-            <p>{{$post->content}}</p>
+          <img src=" {{ $post->url_path}}" alt="{{$post->title}}">
+            <p>{!! $post->content !!}</p>
            <!-- <h3>Categoria: {$category->category}</h3>-->
             <button id="abrirVentana">Ver más</button>
         </div>

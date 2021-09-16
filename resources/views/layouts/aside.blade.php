@@ -14,4 +14,4 @@
     <a href="{{route($route,["ct"=>$category])}}"> {{$category->category}}</a></div>
     @endforeach
     <div class="aside--input"> 
-    <span><a href="{{route($route)}}">All</a></span></div>
+    <a href="{{route($route)}}">Ver Todo</a></div>

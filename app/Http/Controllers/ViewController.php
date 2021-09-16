@@ -7,8 +7,6 @@ use App\Models\Gallery;
 use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rules\Exists;
-use PhpParser\Node\Expr\Empty_;
 
 class ViewController extends Controller
 {
@@ -21,7 +19,7 @@ class ViewController extends Controller
         $categories=Category::all();
         $route="post";
         if (!empty($request->ct)) {
-            $posts=Post::where('type','blog')->where('category_id',$request->ct)->get();
+            $posts=Post::where('type','Blog')->where('category_id',$request->ct)->get();
         }
         return view('post', compact('posts','categories','route'));
     }
@@ -36,7 +34,7 @@ class ViewController extends Controller
         return view('shop', compact('products','categories','route'));
     }
     public function content(Request $request){
-        $posts=Post::where('type', 'content')->get();
+        $posts=Post::where('type', 'Estrategia Didactica')->get();
         $route="content";
         $categories=Category::all();
         if (!empty($request->ct)) {
