@@ -115,12 +115,12 @@ body{
     width: 90%;
     height: 17rem;
     font-size: .9em;
-    margin: 1.9em;
+    margin: 1rem;
     font-weight: bold;
 } 
 .products img{
     width: 85%;
-    height: 12em;
+    height: 11em;
 }
 .products h3{
     color: rgb(9, 255, 0);
@@ -150,6 +150,12 @@ body{
 .section_publications button{
     margin: 1rem 0;
     cursor: pointer;
+}
+.section_publications p{
+    
+    display: inline-block;
+    max-height: 3.7rem;
+    overflow: hidden;
 }
 /*
 .section_publications h3{
@@ -183,7 +189,38 @@ body{
   margin: 1rem .38rem;
   color: #00a4db;
 }
+.window_background{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, .7);
+}
+.window_background--active{
+    display: flex;
+}
+.new-window{
+    max-height: 100%;
+    transition:ease 2s;
+    transform: translateY(100%);
+    text-align: center;
+    display: block;
+    max-width: 70%;
+    background: #ffffff;
+    overflow: auto;
+}
 
+.new-window--active{
+    transform: translateY(0%);
+    visibility: visible;
+}
+.new-window img{
+    width: 40%;
+}
 /*-------------------------------------------DiseÃƒÂ±o del Footer-----------------------------------------*/
 .footer{
     width: 100%;
