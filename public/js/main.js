@@ -1,10 +1,15 @@
-var abrirVentana=document.getElementById('abrirVentana'),
-    cerrarVentana=document.getElementById('cerrar'),
-    fondoVentana=document.getElementById('fondo_ventana');
+var abrir=document.getElementById("open");
+var cerrar=document.getElementById("close");
+var windowBackground=document.getElementById("windowBackground");
+var window=document.getElementById("newWindow");
 
-    abrirVentana.addEventListener('click', function(){
-       fondoVentana.classList.add('active')
-    });
-    cerrarVentana.addEventListener('click', function(){
-        fondoVentana.classList.remove('active')
-     });
+abrir.addEventListener("click", ()=> {
+ 
+   windowBackground.classList.add('window_background--active'),
+   window.classList.add('window--actives')
+});
+cerrar.addEventListener("click", () => {
+
+   windowBackground.classList.remove('window_background--active'),
+   window.classList.remove('window--actives')
+});

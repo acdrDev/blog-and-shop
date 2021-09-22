@@ -49,7 +49,9 @@ class ViewController extends Controller
         if (!empty($request->ct)) {
             $products=Gallery::where('category_id',$request->ct)->get();
         }
-        
-        return view('shop', compact('products','categories','route'));
+        return view('gallery', compact('products','categories','route'));
     }    
+    public function see_more(Post $post){
+        return view('see_more',compact('post'));
+    }
 }
