@@ -12,7 +12,7 @@
     <h2 class="section subtitle"> {{$post->title}}</h2>
     <section class="section">
         <div class="section_publications">
-          <img src=" {{ $post->banner}}" alt="{{$post->title}}">
+          <img src=" {{ $post->url_path}}" alt="{{$post->title}}">
             <p>{!! $post->content !!}</p>
            <!-- <h3>Categoria: {$category->category}</h3>-->
             <a href="{{route('see_more', $post)}}"><button>Ver más</button></a>

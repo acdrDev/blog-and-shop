@@ -8,8 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='{{asset('css/style.css')}}'>
     <link href="https://fonts.googleapis.com/css2?family=Paprika&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="{{asset('js/main.js')}}"></script>
-            
 </head>
 <body>
     <div class="content">
@@ -43,6 +41,8 @@
             <p>Design Made By @Aurora_Core In 2021</p>
         </footer>
     </div>
+
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>
         

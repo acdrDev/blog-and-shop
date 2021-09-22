@@ -12,7 +12,7 @@
         @foreach ($products as $product)
 
             <div class="products">
-                <img src="{{$product->img}}" alt="{{$product->title}}">
+                <img src="{{$product->url_path}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
                 <h3>${{$product->price}}</h3>
                 <button id="{{$product->id}}">Comprar</button>
