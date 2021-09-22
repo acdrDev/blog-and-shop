@@ -27,4 +27,6 @@ class User extends Model implements AuthenticatableContract
   {
     return $this->hasMany('App\Models\Product');
   }
+
+  protected $guarded = [];
 }
