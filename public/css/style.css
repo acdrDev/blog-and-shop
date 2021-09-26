@@ -76,8 +76,7 @@ body{
     font-size: 1.7em;
     font-weight: 10;
     padding: .69rem 1.29rem;
-    margin-top: .68rem;
-    margin-bottom: 3px;
+    margin-top: .68rem 0 3px;
 }
 .section img{
     display: block;
@@ -133,6 +132,7 @@ body{
     background: var(--ColorMenu);
     color: Var(--Blanco);
     border: solid var(--ColorMenu);
+    cursor: pointer;
 }
 
 /*-----------------------Section De Las Publicaciones------------------------*/
@@ -149,7 +149,6 @@ body{
 }
 .section_publications button{
     margin: 1rem 0;
-    cursor: pointer;
 }
 .section_publications p{
     
@@ -162,6 +161,19 @@ body{
     font-weight: 10000;
     margin:1rem 0;
 }*/
+/*---------------------------------------Layout_The_See_More---------------------------------*/
+.see_more{
+    display:flex;
+}
+.see_more img{
+    margin: 0 0 0 1rem;
+}
+.see_more div{
+    text-align: center;
+}
+.see_more div h2{
+    margin: 1rem 0 0;
+}
 
 /*---------------------------------Este es el Aside------------------------------------------*/
 .aside{
@@ -205,8 +217,6 @@ body{
 }
 .new-window{
     max-height: 100%;
-    transition:ease 2s;
-    transform: translateY(100%);
     text-align: center;
     display: block;
     max-width: 70%;
@@ -214,10 +224,7 @@ body{
     overflow: auto;
 }
 
-.new-window--active{
-    transform: translateY(0%);
-    visibility: visible;
-}
+
 .new-window img{
     width: 40%;
 }

@@ -15,7 +15,7 @@
                 <img src="{{$product->url_path}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
                 <h3>${{$product->price}}</h3>
-                <button id="{{$product->id}}">Comprar</button>
+                <a href="{{route('shop_see', $product)}}"><button>Comprar</button></a>
             </div> 
             @endforeach
              

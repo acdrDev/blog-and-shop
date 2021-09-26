@@ -38,7 +38,7 @@ class ViewController extends Controller
         $route="content";
         $categories=Category::all();
         if (!empty($request->ct)) {
-            $posts=Post::where('type','content')->where('category_id',$request->ct)->get();
+            $posts=Post::where('type','Estrategia Didactica')->where('category_id',$request->ct)->get();
         }
         return view('post', compact('posts','categories','route'));
     }
@@ -52,6 +52,12 @@ class ViewController extends Controller
         return view('gallery', compact('products','categories','route'));
     }    
     public function see_more(Post $post){
-        return view('see_more',compact('post'));
+        return view('see_more.see_more',compact('post'));
+    }
+    public function gallery_see(Gallery $product){
+        return view('see_more.gallery_see',compact('product'));
+    }
+    public function shop_see(Product $product){
+        return view('see_more.shop_see', compact('product'));
     }
 }

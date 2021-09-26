@@ -14,18 +14,8 @@
                 <img src="{{$product->url_path}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
                 <h3>{{$product->price}}</h3>
-                <button id="open">Ver mas</button>
-                
-            </div> 
-            <div class="window_background" id="window">
-                <div class="new-window" id="newWindow">
-                    <h2 class="subtitle">{{$product->title}}</h2>
-                    <img src="{{$product->url_path}}" alt="{{$product->title}}">
-                    <h3>{{$product->price}}</h3>
-                    <p class="text">{{$product->description}}</p>
-                    <div class="section_publications"><button id="close">Volver</button></div>
-                </div>
-            </div>    
+                <a href="{{route('gallery_see', $product )}}"><button>Ver mas</button></a>
+            </div>     
             @endforeach
             
             </section>
