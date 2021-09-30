@@ -26,6 +26,7 @@ Route::resource('/posts', PostController::class)->only(['index', 'create', 'edit
 Route::resource('/gallery', GalleryController::class)->only(['index', 'create', 'edit'])->middleware('auth');
 
 Route::resource('/products', ProductController::class)->only(['index', 'create', 'edit'])->middleware('auth');
+Route::get('/products/download/{product}', [ProductController::class, 'download'])->middleware('auth')->name('products.download');
 
 // User config
 Route::get('/perfil', [UserController::class, 'index'])->middleware('auth');

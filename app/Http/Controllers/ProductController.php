@@ -53,7 +53,7 @@ class ProductController extends Controller
     $preview = $request->file('preview')->storeAs('public/products', $previewName);
 
     // Save file
-    $fileName = $request->file('preview')->getClientOriginalName();
+    $fileName = $request->file('file')->getClientOriginalName();
     $file = $request->file('file')->storeAs('public/products', $fileName);
 
     $input['preview'] = $preview;
@@ -152,5 +152,10 @@ class ProductController extends Controller
 
     $product->delete();
     return redirect('/admin/products')->with('success', 'Task Deleted Successfully');
+  }
+
+  public function download(Product $product)
+  {
+    return Storage::download($product->file);
   }
 }
