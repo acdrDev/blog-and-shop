@@ -1,5 +1,9 @@
 # Simple Blog And Shop
-![Init](./preview/Index.jpg) ![Blog](./preview/Publications.jpg) ![Shop](./Shop.jpg)
+<p aling="centar">
+    <img src="./preview/Index.jpg" width="280">
+    <img src="./preview/Publications.jpg" width="280">
+    <img src="./preview/Shop.jpg" width="280" height="384">
+</p>
 
 ## About is project
 
