@@ -1,5 +1,5 @@
 # Simple Blog And Shop
-[Init](./preview/Index.jpg)[Blog](./preview/Publications.jpg)[Shop](./Shop.jpg)
+![Init](./preview/Index.jpg) ![Blog](./preview/Publications.jpg) ![Shop](./Shop.jpg)
 
 ## About is project
 
