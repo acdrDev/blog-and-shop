@@ -10,12 +10,10 @@
     <h2 class="section subtitle">Tienda</h2> 
     <section class="section shot_content">
         @foreach ($products as $product)
-
-            <div class="products">
+            <div class="products letters">
                 <img src="{{$product->url_path}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
-                <h3>${{$product->price}}</h3>
-                <a href="{{route('shop_see', $product)}}"><button>Comprar</button></a>
+                <a href="{{route('shop_see', $product)}}"><button>Ver Mas</button></a>
             </div> 
             @endforeach
              

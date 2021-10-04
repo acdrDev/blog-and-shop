@@ -12,7 +12,7 @@
                 <p class="text">{!!$product->description!!}</p>
                 <div class="section_publications"> 
                   <a href="{{url()->previous()}}"><button>Volver</button></a>
-                  <button>Descargar</button>
+                  <a href="#"><button>Descargar</button></a>
                 </div>
                 </div>
 </section>

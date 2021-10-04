@@ -112,18 +112,20 @@ body{
 .products{
     text-align: center;
     width: 90%;
-    height: 17rem;
     font-size: .9em;
     margin: 1rem;
-    font-weight: bold;
+    font-weight: bold; 
 } 
+.letters {
+    border-radius: 1rem;
+    box-shadow: .4rem .4rem .8rem rgb(192, 191, 191);
+}
 .products img{
     width: 85%;
     height: 11em;
 }
-.products h3{
-    color: rgb(9, 255, 0);
-    padding: .6rem 0 .3rem;
+.products p{
+    margin: .8rem 0;
 }
 .products button, .section_publications button {
     width: 6rem;
@@ -133,6 +135,7 @@ body{
     color: Var(--Blanco);
     border: solid var(--ColorMenu);
     cursor: pointer;
+    margin: 0 0 1rem;
 }
 
 /*-----------------------Section De Las Publicaciones------------------------*/
@@ -149,6 +152,7 @@ body{
 }
 .section_publications button{
     margin: 1rem 0;
+    display: inline-block;
 }
 .section_publications p{
     
@@ -166,7 +170,7 @@ body{
     display:flex;
 }
 .see_more img{
-    margin: 0 0 0 1rem;
+    margin: 1rem 0 0 1rem;
 }
 .see_more div{
     text-align: center;
@@ -174,7 +178,10 @@ body{
 .see_more div h2{
     margin: 1rem 0 0;
 }
-
+.see_more h3{
+    color: rgb(9, 255, 0);
+    padding: .6rem 0 .3rem;
+}
 /*---------------------------------Este es el Aside------------------------------------------*/
 .aside{
     margin: .69rem 0 .69rem .69rem ;

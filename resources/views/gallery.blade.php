@@ -7,10 +7,10 @@
       <!----------------------------Creacion de Las Secciones-------------------------------->
 <div class="justify_section">
 <div class="shot_justify">
-    <h2 class="section subtitle">Tienda</h2> 
+    <h2 class="section subtitle">Galeria</h2> 
     <section class="section shot_content">
         @foreach ($products as $product)
-            <div class="products">
+            <div class="products letters">
                 <img src="{{$product->url_path}}" alt="{{$product->title}}">
                 <p>{{$product->title}}</p>
                 <h3>{{$product->price}}</h3>
