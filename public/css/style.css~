@@ -188,15 +188,10 @@ body{
     width: 100%;
     height: 100%;
 }
-.information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} 
 .see_more-buttoms {
-    display: flex;
     justify-content: space-between;
     margin: 0;
+    width: 100%;
 }
 .see_more h3{
     color: rgb(9, 255, 0);
