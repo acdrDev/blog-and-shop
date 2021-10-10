@@ -70,6 +70,8 @@ body{
 /* ----------------------------------------Los Diseños del Section---------------------------------*/
 .section{
     width: 100%;
+    margin: .30rem;
+    margin-left: 0;
     background: var(--Blanco);
 }
 .subtitle {
@@ -203,7 +205,8 @@ body{
 }
 /*---------------------------------Este es el Aside------------------------------------------*/
 .aside{
-    margin: .69rem 0 .69rem .69rem ;
+    margin: .30rem .35rem;
+    margin-right: 0;
     padding: 1rem;
 }
 .aside p{
@@ -232,7 +235,7 @@ body{
 .footer{
     width: 100%;
     height: 2.8rem;
-    margin-top: 1rem;
+    margin-top: .30rem;
     display: flex;
     justify-content: center;
     align-items: center;

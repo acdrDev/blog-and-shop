@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SiteInitController;
 use App\Http\Controllers\UserController;
 
 /* Login */
@@ -17,9 +18,9 @@ Route::post('/', [LoginController::class, "login"])->name('login');
 Route::post('/logout', [LoginController::class, 'logout']);
 
 // Admin routes
-Route::get('/dashboard', function(){
-  return view('admin.index');
-})->middleware('auth');
+Route::get('/dashboard', [SiteInitController::class,'view'])->middleware('auth');
+
+Route::put('/site-init/{site_init}', [SiteInitController::class, 'update'])->name('site_init')->middleware('auth');
 
 Route::resource('/posts', PostController::class)->only(['index', 'create', 'edit'])->middleware('auth');
 
