@@ -1,4 +1,4 @@
-<?php $__env->startSection('title','Galeria'); ?>
+<?php $__env->startSection('title', 'Galeria'); ?>
     
 <?php $__env->startSection('content'); ?>
 
@@ -7,12 +7,12 @@
 <div class="shot_justify">
     <h2 class="section subtitle">Galeria</h2> 
     <section class="section shot_content">
-        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach ($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="products letters">
                 <img src="<?php echo e($product->url_path); ?>" alt="<?php echo e($product->title); ?>">
                 <p><?php echo e($product->title); ?></p>
                 <h3><?php echo e($product->price); ?></h3>
-                <a href="<?php echo e(route('gallery_see', $product )); ?>"><button>Ver mas</button></a>
+                <a href="<?php echo e(route('gallery_see', $product)); ?>"><button>Ver mas</button></a>
             </div>     
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             

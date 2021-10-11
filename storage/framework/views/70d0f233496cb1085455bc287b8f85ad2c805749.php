@@ -1,4 +1,4 @@
-<?php $__env->startSection('title','Tienda'); ?>
+<?php $__env->startSection('title', 'Tienda'); ?>
     
 <?php $__env->startSection('content'); ?>
 
@@ -7,7 +7,7 @@
 <div class="shot_justify">
     <h2 class="section subtitle">Tienda</h2> 
     <section class="section shot_content">
-        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach ($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="products letters">
                 <img src="<?php echo e($product->url_path); ?>" alt="<?php echo e($product->title); ?>">
                 <p><?php echo e($product->title); ?></p>

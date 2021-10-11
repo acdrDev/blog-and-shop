@@ -9,9 +9,9 @@
 <section class="section aside">
     <p>Categoria</p>
     
-    <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>     
+    <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach ($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>     
     <div class="aside--input"> 
-    <a href="<?php echo e(route($route,["ct"=>$category])); ?>"> <?php echo e($category->category); ?></a></div>
+    <a href="<?php echo e(route($route, ["ct"=>$category])); ?>"> <?php echo e($category->category); ?></a></div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <div class="aside--input"> 
     <a href="<?php echo e(route($route)); ?>">Ver Todo</a></div>

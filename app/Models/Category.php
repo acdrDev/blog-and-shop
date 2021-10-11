@@ -11,15 +11,18 @@ class Category extends Model
 
 
     /* Relations */
-    public function posts() {
+    public function posts()
+    {
         return $this->hasMany('App\Models\Post');
     }
-    
-    public function galleries() {
+
+    public function galleries()
+    {
         return $this->hasMany('App\Models\Gallery');
     }
 
-    public function products() {
+    public function products()
+    {
         return $this->hasMany('App\Models\Product');
     }
 }

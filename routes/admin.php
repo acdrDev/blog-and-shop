@@ -9,8 +9,8 @@ use App\Http\Controllers\SiteInitController;
 use App\Http\Controllers\UserController;
 
 /* Login */
-Route::get('/', function(){
-  return view('admin.login');
+Route::get('/', function () {
+    return view('admin.login');
 });
 
 Route::post('/', [LoginController::class, "login"])->name('login');
@@ -35,5 +35,3 @@ Route::get('/change-password', [UserController::class, 'change_password'])->midd
 
 Route::put('/perfil/{user}', [UserController::class, 'update'])->middleware('auth')->name('perfil.update');
 Route::put('/change_password/{user}', [UserController::class, 'update_password'])->middleware('auth')->name('perfil.update_password');
-
-

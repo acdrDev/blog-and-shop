@@ -6,7 +6,7 @@
    
 <div class="justify_section">
 <div class="section_shot_justify">
-    <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach ($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <h2 class="section subtitle"> <?php echo e($post->title); ?></h2>
     <section class="section">
         <div class="section_publications">

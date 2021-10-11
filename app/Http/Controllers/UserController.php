@@ -11,14 +11,14 @@ class UserController extends Controller
 {
     public function index()
     {
-      $user = Auth()->user();
-      return view('admin.perfil', ['user' => $user]);
+        $user = Auth()->user();
+        return view('admin.perfil', ['user' => $user]);
     }
 
     public function change_password()
     {
-      $user = Auth()->user();
-      return view('admin.change-password', ['user' => $user]);
+        $user = Auth()->user();
+        return view('admin.change-password', ['user' => $user]);
     }
 
 

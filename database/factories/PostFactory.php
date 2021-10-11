@@ -26,7 +26,7 @@ class PostFactory extends Factory
         return [
             'title'=>$this->faker->sentence(4),
             'content'=>$this->faker->text(1000),
-            'banner'=> 'storage/post/' . $this->faker->image('public/storage/post', 700, 700, null,false),
+            'banner'=> 'storage/post/' . $this->faker->image('public/storage/post', 700, 700, null, false),
             'type'=>$this->faker->randomElement(['Blog','Estrategia Didactica']),
             'user_id'=> User::all()->random()->id,
             'category_id'=>Category::all()->random()->id,

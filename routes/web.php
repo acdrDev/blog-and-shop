@@ -28,7 +28,7 @@ Route::get('gallery', [ViewController::class, 'gallery']) ->name('gallery');
 Route::get('see_more/{post}', [ViewController::class, 'see_more'])->name('see_more');
 Route::get('gallery_see_more/{product}', [ViewController::class, 'gallery_see'])-> name('gallery_see');
 Route::get('shop_see_more/{product}', [ViewController::class, 'shop_see'])->name('shop_see');
-/* 
+/*
 Route::post('/register', function(Request $request) {
   $user = new User();
   $user->name = $request->name;
@@ -42,5 +42,5 @@ Route::post('/register', function(Request $request) {
 
 // Token
 Route::get('/token', function () {
-          return csrf_token(); 
+    return csrf_token();
 });

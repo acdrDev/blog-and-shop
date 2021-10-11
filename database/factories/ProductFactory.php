@@ -29,7 +29,7 @@ class ProductFactory extends Factory
             'preview'=>$this->faker->text(20),
             'file'=>$this->faker->text(10),
             'price'=> intval($this->faker->randomElement(['50000', '10000','100000'])),
-            'img'=> 'storage/product/' . $this ->faker->image('public/storage/product', 700,500, null, false ),
+            'img'=> 'storage/product/' . $this ->faker->image('public/storage/product', 700, 500, null, false),
             'user_id'=>User::all()->random()->id,
             'category_id'=>Category::all()->random()->id,
              ];

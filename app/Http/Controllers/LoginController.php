@@ -7,24 +7,25 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function login(Request $req) {
-      
-      $credentials = $req->only('email', 'password');
+    public function login(Request $req)
+    {
+        $credentials = $req->only('email', 'password');
 
-      if(Auth::attempt($credentials)){
-        $req->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $req->session()->regenerate();
 
-        return redirect()->intended('/admin/dashboard');
-      }
+            return redirect()->intended('/admin/dashboard');
+        }
 
-      return redirect('admin');
+        return redirect('admin');
     }
 
-    public function logout(Request $req){
-      Auth::logout();
+    public function logout(Request $req)
+    {
+        Auth::logout();
 
-      $req->session()->invalidate();
-      
-      return redirect('/');
+        $req->session()->invalidate();
+
+        return redirect('/');
     }
 }

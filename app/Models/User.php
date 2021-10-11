@@ -9,24 +9,24 @@ use Illuminate\Auth\Authenticatable;
 
 class User extends Model implements AuthenticatableContract
 {
-  use HasFactory;
-  use Authenticatable;
+    use HasFactory;
+    use Authenticatable;
 
-  /* Relations */
-  public function posts()
-  {
-    return $this->hasMany('App\Models\Post');
-  }
+    /* Relations */
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post');
+    }
 
-  public function galleries()
-  {
-    return $this->hasMany('App\Models\Gallery');
-  }
+    public function galleries()
+    {
+        return $this->hasMany('App\Models\Gallery');
+    }
 
-  public function products()
-  {
-    return $this->hasMany('App\Models\Product');
-  }
+    public function products()
+    {
+        return $this->hasMany('App\Models\Product');
+    }
 
-  protected $guarded = [];
+    protected $guarded = [];
 }

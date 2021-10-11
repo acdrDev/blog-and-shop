@@ -10,54 +10,62 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('index');
     }
 
-    public function post(Request $request){
+    public function post(Request $request)
+    {
         $posts=Post::where('type', 'blog')->get();
         $categories=Category::all();
         $route="post";
         if (!empty($request->ct)) {
-            $posts=Post::where('type','Blog')->where('category_id',$request->ct)->get();
+            $posts=Post::where('type', 'Blog')->where('category_id', $request->ct)->get();
         }
-        return view('post', compact('posts','categories','route'));
+        return view('post', compact('posts', 'categories', 'route'));
     }
-    
-    public function shop(Request $request){
+
+    public function shop(Request $request)
+    {
         $products = Product::all();
         $route="shop";
         $categories=Category::all();
         if (!empty($request->ct)) {
-            $products=Product::where('category_id',$request->ct)->get();
+            $products=Product::where('category_id', $request->ct)->get();
         }
-        return view('shop', compact('products','categories','route'));
+        return view('shop', compact('products', 'categories', 'route'));
     }
-    public function content(Request $request){
+    public function content(Request $request)
+    {
         $posts=Post::where('type', 'Estrategia Didactica')->get();
         $route="content";
         $categories=Category::all();
         if (!empty($request->ct)) {
-            $posts=Post::where('type','Estrategia Didactica')->where('category_id',$request->ct)->get();
+            $posts=Post::where('type', 'Estrategia Didactica')->where('category_id', $request->ct)->get();
         }
-        return view('post', compact('posts','categories','route'));
+        return view('post', compact('posts', 'categories', 'route'));
     }
-    public function gallery(Request $request){
+    public function gallery(Request $request)
+    {
         $products=Gallery::all();
         $route="gallery";
         $categories=Category::all();
         if (!empty($request->ct)) {
-            $products=Gallery::where('category_id',$request->ct)->get();
+            $products=Gallery::where('category_id', $request->ct)->get();
         }
-        return view('gallery', compact('products','categories','route'));
-    }    
-    public function see_more(Post $post){
-        return view('see_more.see_more',compact('post'));
+        return view('gallery', compact('products', 'categories', 'route'));
     }
-    public function gallery_see(Gallery $product){
-        return view('see_more.gallery_see',compact('product'));
+    public function see_more(Post $post)
+    {
+        return view('see_more.see_more', compact('post'));
     }
-    public function shop_see(Product $product){
+    public function gallery_see(Gallery $product)
+    {
+        return view('see_more.gallery_see', compact('product'));
+    }
+    public function shop_see(Product $product)
+    {
         return view('see_more.shop_see', compact('product'));
     }
 }

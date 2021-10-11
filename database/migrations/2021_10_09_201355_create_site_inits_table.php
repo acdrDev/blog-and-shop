@@ -14,16 +14,16 @@ class CreateSiteInitsTable extends Migration
     public function up()
     {
         Schema::create('site_inits', function (Blueprint $table) {
-          $table->id();
-          $table->string('first_section_title')->nullable();
-          $table->string('img_first_section')->nullable();
-          $table->text('first_description')->nullable();
-          $table->string('second_section_title')->nullable();
-          $table->text('second_description')->nullable();
-          $table->string('twitter')->nullable();
-          $table->string('facebook')->nullable();
-          $table->string('whatsapp')->nullable();
-          $table->timestamps();
+            $table->id();
+            $table->string('first_section_title')->nullable();
+            $table->string('img_first_section')->nullable();
+            $table->text('first_description')->nullable();
+            $table->string('second_section_title')->nullable();
+            $table->text('second_description')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -15,20 +15,19 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        
+
         Storage::deleteDirectory('product');
         Storage::makeDirectory('product');
         Storage::deleteDirectory('gallery');
         Storage::makeDirectory('gallery');
         Storage::deleteDirectory('post');
         Storage::makeDirectory('post');
-        
-       
+
+
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(PostSeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(GallerySeeder::class);
-            
     }
 }
