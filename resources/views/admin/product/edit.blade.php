@@ -49,11 +49,11 @@
             </div>
         </div>
         <div class="row">
-             <!-- This textarea save post content -->
+            <!-- This textarea save post content -->
             <textarea hidden id="body" name="description">{!! $data->description !!}</textarea>
             <label for="body" class="form-label">Descripcion del contenido</label>
             <div id="editor" class="bg-white">
-                  {!! $data->description !!}
+                {!! $data->description !!}
             </div>
         </div>
     </form>

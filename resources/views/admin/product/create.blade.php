@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <label for="title" class="form-label">Titulo</label>
                     <input type="text" class="form-control" id="title" name="title">
-                </div> 
+                </div>
                 <div class="form-group">
                     <label for="img" class="form-label">Vista previa</label>
                     <input type="file" id="img" name="preview" class="form-control-file">

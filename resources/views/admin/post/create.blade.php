@@ -17,7 +17,7 @@
             <div class="col">
 
                 <!-- This input save the index of the user -->
-                <input type="number" value={{ auth()->id(); }} hidden name="user">
+                <input type="number" value={{ auth()->id() }} hidden name="user">
 
                 <div class="form-group">
                     <label for="title" class="form-label">Titulo</label>
