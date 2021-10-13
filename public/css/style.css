@@ -94,12 +94,17 @@ body{
 .section_redes{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .section_redes img{
-    width: 7em;
-    height: 7em;
+    width: 5em;
     margin: 1em 1em 2em;
 }
+.section_redes a {
+    text-decoration: none;
+    color: #000;
+}
+
 /*-------------------------------------Estructuracion De la Pagina------------------------------*/
 .justify_section{
     display:grid; 
@@ -127,7 +132,7 @@ body{
     height: 11em;
 }
 .products p{
-    margin: .8rem 0;
+    margin: .8rem .3rem;
 }
 .products button, .section_publications button {
     width: 6rem;
@@ -157,7 +162,6 @@ body{
     display: inline-block;
 }
 .section_publications p{
-    
     display: inline-block;
     max-height: 3.7rem;
     overflow: hidden;
@@ -169,13 +173,10 @@ body{
 }*/
 /*---------------------------------------Layout_The_See_More---------------------------------*/
 .see_more{
-  margin-top: 1rem;
-  padding: 1.5rem;
+    margin: .5rem 0;
+  padding: 1rem;
   display: grid;
-  min-height: 20rem;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
 }
 .see_more img{
   width: 100%;
@@ -184,23 +185,18 @@ body{
 .see_more > div{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
+    text-align: center;
+    padding: 0 1rem;
 }
-.information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} 
-.see_more-buttoms {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
+
+.see_more-buttoms  {
+    display: block;
+    margin: 2rem 0;
+    text-align: center;
+    
 }
 .see_more h3{
+    margin: 1rem 0 0;
     color: rgb(9, 255, 0);
 }
 /*---------------------------------Este es el Aside------------------------------------------*/
@@ -213,11 +209,14 @@ body{
     padding: 0 0 .69rem;
 }
 .aside ul{
+    max-height: 10rem;
     padding: .8rem 0 0;
+    overflow: hidden;
 }
 .aside ul li{
     list-style: none;
     display: block;
+    margin: 1.5rem;
 }
 .aside a{
     text-decoration: none; 

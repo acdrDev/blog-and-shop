@@ -7,32 +7,26 @@
         @section('content')
 
             <!------------------------------Creacion de Las Secciones------------------------------>
-            <h2 class="section subtitle">¿Quienes Somos?</h2>
+            @foreach ($site_init as $site_inits)
+            <h2 class="section subtitle">{{$site_inits->first_section_title}}</h2>
             <section class="section">
-                <img src="img/WhatsApp Image 2021-06-27 at 9.37.22 PM.jpeg">
-                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quas, saepe,
-                    voluptates, consequatur quos eveniet eius maiores veniam aut alias necessitatibus excepturi quae. Amet
-                    iste quaerat excepturi voluptates beatae culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto neque aliquid est ipsum minima placeat, itaque magni consequatur magnam ipsam hic cupiditate enim
-                    molestias quibusdam distinctio beatae? Blanditiis, est provident! Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Quisquam, deserunt mollitia architecto accusantium ut ipsa inventore consequatur
-                    repellendus quo, praesentium quod cupiditate vitae dignissimos dolorum, odit at! Facere, minus a. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed libero consequuntur quibusdam ea animi
-                    quia veniam esse, ipsam odio tempore earum consectetur voluptates rerum laudantium, saepe, vel ipsa
-                    itaque.</p>
+                <img src="{{$site_inits->url_path}}" alt="{{$site_inits->first_section_title}}">
+                <p class="text">{!!$site_inits->first_description!!}</p>
             </section>
 
-            <h2 class="section subtitle">Asesoria y Consultas</h2>
+            <h2 class="section subtitle">{{$site_inits->second_section_title}}</h2>
             <section class="section">
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit et est magnam qui
-                    sequi saepe molestias, sit adipisci reiciendis magni tempora, repellendus libero placeat, iure alias
-                    quos laudantium aliquid illo?</p>
+                <p class="text">{!!$site_inits->second_description!!}</p>
+            </section>
+            <h2 class="section subtitle">Redes Sociales</h2>
+            <section class="section">
                 <div class="section_redes">
-                    <img src="img/Img_Section_1.png">
-                    <img src="img/Img_Section_2.png">
-                    <img src="img/circle-twitter_icon-icons.com_68035.png">
+                    <img src="img/Img_Section_1.png"><a href="#">{{$site_inits->whatsapp}}</a>
+                    <img src="img/Img_Section_2.png"><a href="#">{{$site_inits->facebook}}</a>
+                    <img src="img/circle-twitter_icon-icons.com_68035.png"><a href="#">{{$site_inits->twitter}}</a>
                 </div>
             </section>
-        </div>
+            @endforeach
+    </div>
 
     @endsection

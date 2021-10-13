@@ -22,7 +22,14 @@
         </div>
         <!---------------------------Elavoracion Del Aside------------------------------------->
         <div class="aside_justify">
-
+            <section class="section aside">
+                <p>Publicaciones Recientes</p>
+                <ul>
+                    @foreach ($ultimes as $ultime)                        
+                    <li><a href="{{ route('gallery_see', [$product = $ultime]) }}">{{$ultime->title}}</a></li>
+                    @endforeach
+                </ul>
+            </section>
             @include('layouts.aside')
         </div>
 

@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-
+        Storage::deleteDirectory('siteinit');
+        Storage::makeDirectory('siteinit');
         Storage::deleteDirectory('product');
         Storage::makeDirectory('product');
         Storage::deleteDirectory('gallery');
@@ -29,5 +30,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PostSeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(GallerySeeder::class);
+        $this->call(Site_initSeeder::class);
     }
 }
