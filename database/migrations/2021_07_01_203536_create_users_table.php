@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->string('password');
+            $table->string('mp-publicKey')->nullable();
+            $table->string('mp-accesToken')->nullable();
             $table->string('rol');
             $table->timestamps();
         });
