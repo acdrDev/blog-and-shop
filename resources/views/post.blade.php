@@ -9,10 +9,14 @@
     <div class="justify_section">
         <div class="section_shot_justify">
             @foreach ($posts as $post)
-                <h2 class="section subtitle"> {{ $post->title }} {{$post->created_at}}</h2>
+                <h2 class="section subtitle"> {{ $post->title }}</h2>
                 <section class="section">
                     <div class="section_publications">
-                    <img src=" {{ $post->url_path }}" alt="{{ $post->title }}">
+                    @if (isset($post->banner))
+                    <img src=" {{ $post->url_path }}" alt="{{ $post->title }}">                        
+                    @else
+                    <img src=" {{asset('img/índice.png')}}" alt="{{ $post->title }}">    
+                    @endif
                     <p>{!! $post->content !!}</p>
                         <!-- <h3>Categoria: {$category->category}</h3>-->
                         <a href="{{ route('see_more', $post) }}"><button>Ver más</button></a>
@@ -27,7 +31,7 @@
                 <p>Publicaciones Recientes</p>
                 <ul>
                     @foreach ($ultimes as $ultime)                        
-                    <li><a href="{{ route('see_more', [$product = $post]) }}">{{$ultime->title}}</a></li>
+                    <li><a href="{{ route('see_more', [$post=$ultime]) }}">{{$ultime->title}}</a></li>
                     @endforeach
                 </ul>
             </section>

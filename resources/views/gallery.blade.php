@@ -11,7 +11,7 @@
             <section class="section shot_content">
                 @foreach ($products as $product)
                     <div class="products letters">
-                        <img src="{{ $product->url_path }}" alt="{{ $product->title }}">
+                        <img src="{{ $product->url_path }}" alt="{{ $product->title }}">                            
                         <p>{{ $product->title }}</p>
                         <h3>{{ $product->price }}</h3>
                         <a href="{{ route('gallery_see', $product) }}"><button>Ver mas</button></a>
