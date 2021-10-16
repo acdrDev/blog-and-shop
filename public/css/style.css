@@ -161,9 +161,9 @@ body{
     margin: 1rem 0;
     display: inline-block;
 }
-.section_publications p{
+.content-posts{
     display: inline-block;
-    max-height: 3.7rem;
+    max-height: 14rem;
     overflow: hidden;
 }
 /*

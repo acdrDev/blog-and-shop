@@ -50,7 +50,7 @@
         <div class="row">
             <div id="prueba" class="col form-group">
                 <!-- This textarea save post content -->
-                <textarea hidden id="content" name="body">{!! $post->content !!}</textarea>
+                <textarea hidden id="body" name="content">{!! $post->content !!}</textarea>
                 <label for="body" class="form-label">Contenido</label>
                 <div id="editor" class="bg-white">
                     {!! $post->content !!}

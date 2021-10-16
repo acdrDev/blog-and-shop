@@ -31,8 +31,7 @@
                     <td>${{ $item->price }}</td>
                     <td class=""><img class="img-fluid" src="{{ $item->url_path }}"
                             alt="{{ $item->title }}"></td>
-                    <td class="text-center"><a href="{{ route('products.download', $item->id) }}"><i
-                                class="fas fa-download"></i></a></td>
+                    <td class="text-center"><a href="{{ route('products.download', $item->id) }}"><i class="fas fa-download"></i></a></td>
                     <td>{{ $item->category->category }}</td>
                     <td class="text-center">{{ $item->created_at }}</td>
                     <td style="font-size: 1.3rem" class="text-center d-flex justify-center">

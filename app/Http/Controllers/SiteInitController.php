@@ -33,7 +33,7 @@ class SiteInitController extends Controller
             }
 
             //Save new image
-            $file = $request->file('img_first_section')->storeAs('public/site-init', date('d-m-Y'));
+            $file = $request->file('img_first_section')->storeAs('site-init', date('d-m-Y'));
 
             $input['img_first_section'] = $file;
         }

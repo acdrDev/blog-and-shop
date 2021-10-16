@@ -14,10 +14,8 @@
                     <div class="section_publications">
                     @if (isset($post->banner))
                     <img src=" {{ $post->url_path }}" alt="{{ $post->title }}">                        
-                    @else
-                    <img src=" {{asset('img/índice.png')}}" alt="{{ $post->title }}">    
                     @endif
-                    <p>{!! $post->content !!}</p>
+                    <div class="content-posts">{!! $post->content !!}</div>
                         <!-- <h3>Categoria: {$category->category}</h3>-->
                         <a href="{{ route('see_more', $post) }}"><button>Ver más</button></a>
                         

@@ -24,7 +24,7 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li class="menu_li_Active"><a href="{{ route('index') }}">Navbar</a></li>
+                        <li class="menu_li_Active"><a href="{{ route('index') }}">Inicio</a></li>
                         <li><a href="{{ route('post') }}">Publicaciones</a></li>
                         <li><a href="{{ route('content') }}">Contenido Didactico</a></li>
                         <li><a href="{{ route('gallery') }}">Galeria</a></li>

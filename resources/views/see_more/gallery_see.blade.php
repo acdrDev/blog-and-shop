@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'galeria ver mas')
+@section('title', 'Ver mas')
 
 @section('content')
 
@@ -14,7 +14,7 @@
             </div>
             <div class="see_more-buttoms section_publications ">
                 <a href="{{ url()->previous() }}"><button>Volver</button></a>
-                <a href="#"><button>Descargar</button></a>
+                <a href="{{route('gallery.download', $product->id)}}"><button>Descargar</button></a>
             </div>
         </div>
     </section>

@@ -48,7 +48,7 @@ class GalleryController extends Controller
 
         // Save file
         $fileName = date('d-m-Y-') . $request->file('img')->getClientOriginalName();
-        $file = $request->file('img')->storeAs('public/gallery', $fileName);
+        $file = $request->file('img')->storeAs('gallery', $fileName);
 
         $input['img'] = $file;
 
@@ -104,7 +104,7 @@ class GalleryController extends Controller
 
             // Save new image
             $fileName = date('d-m-Y-') . $request->file('img')->getClientOriginalName();
-            $file = $request->file('img')->storeAs('public/gallery', $fileName);
+            $file = $request->file('img')->storeAs('gallery', $fileName);
 
             $input['img'] = $file;
         }
@@ -127,5 +127,10 @@ class GalleryController extends Controller
         }
         $gallery->delete();
         return redirect('/admin/gallery')->with('success', 'Task Deleted Successfully');
+    }
+
+    public function download(Gallery $gallery)
+    {
+        return Storage::download($gallery->img);
     }
 }

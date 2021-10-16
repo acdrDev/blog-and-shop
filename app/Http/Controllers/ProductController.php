@@ -50,11 +50,11 @@ class ProductController extends Controller
 
         // Save preview
         $previewName = date('d-m-Y') . $request->file('preview')->getClientOriginalName();
-        $preview = $request->file('preview')->storeAs('public/products', $previewName);
+        $preview = $request->file('preview')->storeAs('products', $previewName);
 
         // Save file
         $fileName = $request->file('file')->getClientOriginalName();
-        $file = $request->file('file')->storeAs('public/products', $fileName);
+        $file = $request->file('file')->storeAs('products', $fileName);
 
         $input['preview'] = $preview;
         $input['file'] = $file;
@@ -111,7 +111,7 @@ class ProductController extends Controller
 
             // Save new file
             $fileName = $request->file('file')->getClientOriginalName();
-            $file = $request->file('file')->storeAs('public/products', $fileName);
+            $file = $request->file('file')->storeAs('products', $fileName);
 
             $input['file'] = $file;
         }
@@ -124,7 +124,7 @@ class ProductController extends Controller
 
             // Save new preview
             $previewName = date('d-m-Y') . $request->file('preview')->getClientOriginalName();
-            $preview = $request->file('preview')->storeAs('public/products', $previewName);
+            $preview = $request->file('preview')->storeAs('products', $previewName);
 
             $input['preview'] = $preview;
         }

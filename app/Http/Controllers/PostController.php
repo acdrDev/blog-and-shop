@@ -54,7 +54,7 @@ class PostController extends Controller
 
         if (!empty($request->file('banner'))) {
             $fileName = date('d-m-Y-') . $request->file('banner')->getClientOriginalName();
-            $file = $request->file('banner')->storeAs('public/post', $fileName);
+            $file = $request->file('banner')->storeAs('posts', $fileName);
             $data->banner = $file;
         }
 
@@ -102,7 +102,7 @@ class PostController extends Controller
                 Storage::delete($post->banner);
             }
             $fileName = date('d-m-Y-') . $request->file('banner')->getClientOriginalName();
-            $file = $request->file('banner')->storeAs('public/post', $fileName);
+            $file = $request->file('banner')->storeAs('posts', $fileName);
             $input['banner'] = $file;
         }
         $post->update($input);
